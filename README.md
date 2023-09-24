@@ -24,45 +24,61 @@
 **Таблица "Сотрудники" (Employees)**
 
 employee_id - идентификатор сотрудника (serial, primary key).
+
 full_name - ФИО сотрудника (varchar(255)).
+
 salary_id - идентификатор оклада (serial, primary key).
+
 position_id - идентификатор должности (integer, внешний ключ, связанный с таблицей "Должности").
+
 department_type_id - идентификатор типа подразделения (integer, внешний ключ, связанный с таблицей "Типы подразделений").
+
 department_id - идентификатор структурного подразделения (integer, внешний ключ, связанный с таблицей "Структурные подразделения").
+
 hire_date - дата приема на работу (date).
+
 branch_id - идентификатор филиала (integer, внешний ключ, связанный с таблицей "Филиалы").
+
 project_id - идентификатор проекта (serial, primary key).
 
 **Таблица "Должности" (Positions)**
 
 position_id - идентификатор должности (serial, primary key).
+
 position_name - название должности (varchar(100)).
 
 **Таблица "Типы подразделений" (DepartmentTypes)**
 
 department_type_id - идентификатор типа подразделения (serial, primary key).
+
 type_name - название типа подразделения (varchar(100)).
 
 **Таблица "Структурные подразделения" (Departments)**
 
 department_id - идентификатор структурного подразделения (serial, primary key).
+
 department_name - название структурного подразделения (varchar(100)).
 
 **Таблица "Филиалы" (Branches)**
 
 branch_id - идентификатор филиала (serial, primary key).
+
 branch_address - адрес филиала (varchar(255)).
 
 **Таблица "Оклады" (Salaries)**
 
 salary_id - идентификатор оклада (serial, primary key).
+
 employee_id - идентификатор сотрудника (integer, внешний ключ, связанный с таблицей "Сотрудники").
+
 salary_amount - сумма оклада (numeric(10, 2)).
 
 **Таблица "Проекты" (Projects)**
 
 project_id - идентификатор проекта (serial, primary key).
+
 employee_id - идентификатор сотрудника (integer, внешний ключ, связанный с таблицей "Сотрудники").
+
 project_name - название проекта (varchar(100)).
 
 # Задание 2
